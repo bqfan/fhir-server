@@ -98,7 +98,7 @@ services:
       - '2181:2181'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
-    restart: on-failure
+    restart: no
     healthcheck:
       test: [ 'CMD-SHELL', 'echo ruok | nc -w 2 zookeeper 2181' ]
 
